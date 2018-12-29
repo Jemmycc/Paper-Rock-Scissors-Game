@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rock, Paper & Scissors Game
+    </title>
+    <!-- style sheet -->
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed|Spirax" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+</head>
+
+
+<body>
+
+    <div id="game"></div>
+    <header>
+
+        <div id="title">Rock, Paper & Scissors</div>
+        <p>Rock, Paper, Scissors is a simple hand game that is played around the world, with many
+            different names and variations. <br>
+            It is commonly used as a way of coming to decisions, and in some cases is even played for sport. <br>
+            The rules require that competing players use one hand to form one of three shapes at an agreed-upon time.<br>
+            The person that plays the strongest “object” is the winner of the game.
+        </p>
+        <h3 id="intro-text">Let's have some fun! <i class="far fa-grin-beam"></i></h3>
+        <h3 id="intro-text2"><small>INSTRUCTION:</small> Please enter your name and <br>be ready to hit the "icons" for
+            rock, paper, and scissors to compete with your partner.</h3>
+
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <section id="input-area">
+                <div class="col-lg-12">
+                    <div id="swap-name"> Your name here: <input type="text" class="input-name" id="username">
+                        <button class="input-btn" id="add-user" type="submit">Enter</button></div>
+                </div>
+            </section>
+
+            <div id="current-turn">
+                <h4></h4>
+            </div>
+
+        </div>
+
+        <div class="row" id="content">
+
+            <div class="col-lg-5">
+                <div id="player1">
+                    <div id="sub-title">Player One: </div>&nbsp <span class="playersname" id="player1-name"></span>
+                    <div id="sub-title"> Player One Guess: </div>
+                    <div id="player1-guess">
+                        <button id="button1-s" class="choices"><img src="./images/scissors.png" /></button>
+                        <button id="button1-r" class="choices"><img src="./images/rock.png" /></button>
+                        <button id="button1-p" class="choices"><img src="./images/paper.png" /></button>
+                    </div>
+                    <div id="sub-title-score">Player One Score: &nbsp </div><span id="player1-states"></span>
+                </div>
+            </div>
+
+            <div class="col-lg-2">
+                <br><br>
+                <span id="result">
+                </span>
+
+            </div>
+
+
+            <div class="col-lg-5">
+                <div id="player2">
+                    <div id="sub-title">Player Two: </div>&nbsp <span class="playersname" id="player2-name"></span>
+                    <div id="sub-title"> Player Two Guess: </div>
+                    <div id="player2-guess">
+                        <button id="button2-s" class="choices"><img src="./images/scissors.png" /></button>
+                        <button id="button2-r" class="choices"><img src="./images/rock.png" /></button>
+                        <button id="button2-p" class="choices"><img src="./images/paper.png" /></button>
+                    </div>
+                    <div id="sub-title-score"> Player Two Score: &nbsp </div><span id="player2-states"></span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div id="chat">
+                <div id="chat-messages"></div>
+                <div id="chat-bar">
+                    <input id="chat-input" />
+                    <button id="chat-send">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer></footer>
+
+    <script type="text/javascript" src="./script.js"></script>
+
+</body>
+
+
+</html>
