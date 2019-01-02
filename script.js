@@ -106,7 +106,7 @@ function makeGuess(clickChoice) {
 chatData.orderByChild("time").on("child_added", function (snapshot) {
     $("#chat-messages").append(
         $("<p>").addClass("player-" + snapshot.val().idNum),
-        $("<span>").text(snapshot.val().name + ":" + snapshot.val().message)
+        $("<span>").text(snapshot.val().name + ": " + snapshot.val().message)
     );
 
     //keeps div scrolled to bottom on each update
